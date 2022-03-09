@@ -41,7 +41,28 @@ jobs:
         SEVERITY_THRESHOLD: fixable
         # Use the Lacework policy managed feature (beta). If enabled this overwrites `FAIL_BUILD`and `SEVERITY_THRESHOLD`. (Default: false)
         USE_POLICY: false
-        
+   
+    - name: Commit files
+      id: commit
+      run: |
+        cd evaluations
+        git config --local user.email "action@github.com"
+        git config --local user.name "github-actions"
+        git add --all
+        if [-z "$(git status --porcelain)"]; then
+           echo "::set-output name=push::false"
+        else
+           git commit -m "Add changes" -a
+           echo "::set-output name=push::true"
+        fi
+      shell: bash
+      
+    - name: Push Report File to Repo
+      if: steps.commit.outputs.push == 'true'
+      uses: ad-m/github-push-action@master
+      with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+      
     - name: Docker Login
       uses: docker/login-action@v1.14.1
       with:
