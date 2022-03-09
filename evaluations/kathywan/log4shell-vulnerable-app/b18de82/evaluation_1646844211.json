@@ -1,0 +1,2062 @@
+{
+  "cve": {
+    "total_vulnerabilities": 85,
+    "total_exceptions": 0,
+    "critical_vulnerabilities": 4,
+    "high_vulnerabilities": 11,
+    "medium_vulnerabilities": 32,
+    "low_vulnerabilities": 38,
+    "info_vulnerabilities": 0,
+    "fixable_vulnerabilities": 85,
+    "last_evaluation_time": "2022-03-09T16:43:31.202Z",
+    "image": {
+      "image_info": {
+        "image_digest": "",
+        "image_id": "sha256:c6b110b951c3c271a5df2323660675d35578234c19556f7676d5b0030759368d",
+        "registry": "",
+        "repository": "kathywan/log4shell-vulnerable-app",
+        "created_time": "2022-03-09T16:43:26.832Z",
+        "size": 121257704,
+        "tags": [
+          "b18de82"
+        ]
+      },
+      "image_layers": [
+        {
+          "hash": "sha256:5491dce778832e33c284cd8185100e76d6daa18f8cbc32458c706776894127fc",
+          "created_by": "ADD file:2ff00caea4e83dfade726ca47e3c795a1e9acb8ac24e392785c474ecf9a621f2 in / ",
+          "packages": [
+            {
+              "name": "musl",
+              "namespace": "alpine:v3.8",
+              "version": "1.1.19-r10",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2019-14697",
+                  "description": "",
+                  "severity": "Critical",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14697",
+                  "fix_version": "1.1.19-r11",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-08-06T16:15Z",
+                        "Score": 7.5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 5.9,
+                        "Score": 9.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hash": "sha256:d62cfce965bd34d7d77b27aa8c8e106570e1214ecb8954e308e1698859ba7a2e",
+          "created_by": "{ \t\techo '#!/bin/sh'; \t\techo 'set -e'; \t\techo; \t\techo 'dirname \"$(dirname \"$(readlink -f \"$(which javac || which java)\")\")\"'; \t} \u003e /usr/local/bin/docker-java-home \t\u0026\u0026 chmod +x /usr/local/bin/docker-java-home",
+          "packages": []
+        },
+        {
+          "hash": "sha256:f4426cc1c1e6809c77d9ce6cdf4c0f18a05613ee356488cb7dc15aa501088cd4",
+          "created_by": "set -x \t\u0026\u0026 apk add --no-cache \t\topenjdk8=\"$JAVA_ALPINE_VERSION\" \t\u0026\u0026 [ \"$JAVA_HOME\" = \"$(docker-java-home)\" ]",
+          "packages": [
+            {
+              "name": "libtasn1",
+              "namespace": "alpine:v3.8",
+              "version": "4.13-r0",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2018-1000654",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-1000654",
+                  "fix_version": "4.14-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-08-20T19:31Z",
+                        "Score": 7.1,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:C"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 3.6,
+                        "Score": 5.5,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "libpng",
+              "namespace": "alpine:v3.8",
+              "version": "1.6.34-r1",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2019-7317",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-7317",
+                  "fix_version": "1.6.37-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-02-04T08:29Z",
+                        "Score": 2.6,
+                        "Vectors": "AV:N/AC:H/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 3.6,
+                        "Score": 5.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2018-14048",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14048",
+                  "fix_version": "1.6.37-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-07-13T16:29Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 3.6,
+                        "Score": 6.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2018-14550",
+                  "description": "",
+                  "severity": "High",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14550",
+                  "fix_version": "1.6.37-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-07-10T12:15Z",
+                        "Score": 6.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 5.9,
+                        "Score": 8.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "openjdk8",
+              "namespace": "alpine:v3.8",
+              "version": "8.181.13-r0",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2018-3214",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3214",
+                  "fix_version": "8.191.12-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-10-17T01:31Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 1.4,
+                        "Score": 5.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2018-3136",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3136",
+                  "fix_version": "8.191.12-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-10-17T01:31Z",
+                        "Score": 2.6,
+                        "Vectors": "AV:N/AC:H/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 1.4,
+                        "Score": 3.4,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:N/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2018-3183",
+                  "description": "",
+                  "severity": "Critical",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3183",
+                  "fix_version": "8.191.12-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-10-17T01:31Z",
+                        "Score": 6.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 6,
+                        "Score": 9,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2018-16435",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-16435",
+                  "fix_version": "8.191.12-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-09-04T00:29Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 3.6,
+                        "Score": 5.5,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2018-3180",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3180",
+                  "fix_version": "8.191.12-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-10-17T01:31Z",
+                        "Score": 6.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 3.4,
+                        "Score": 5.6,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2018-3169",
+                  "description": "",
+                  "severity": "High",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3169",
+                  "fix_version": "8.191.12-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-10-17T01:31Z",
+                        "Score": 5.1,
+                        "Vectors": "AV:N/AC:H/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 6,
+                        "Score": 8.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2018-13785",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-13785",
+                  "fix_version": "8.191.12-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-07-09T13:29Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 3.6,
+                        "Score": 6.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2018-3139",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3139",
+                  "fix_version": "8.191.12-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-10-17T01:31Z",
+                        "Score": 2.6,
+                        "Vectors": "AV:N/AC:H/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 1.4,
+                        "Score": 3.1,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2018-3149",
+                  "description": "",
+                  "severity": "High",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-3149",
+                  "fix_version": "8.191.12-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-10-17T01:31Z",
+                        "Score": 5.1,
+                        "Vectors": "AV:N/AC:H/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 6,
+                        "Score": 8.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2422",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2422",
+                  "fix_version": "8.201.08-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-01-16T19:30Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 1.4,
+                        "Score": 3.1,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2426",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2426",
+                  "fix_version": "8.201.08-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-01-16T19:30Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2018-11212",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-11212",
+                  "fix_version": "8.201.08-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2018-05-16T17:29Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 3.6,
+                        "Score": 6.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2684",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2684",
+                  "fix_version": "8.212.04-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-04-23T19:32Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 3.6,
+                        "Score": 5.9,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2698",
+                  "description": "",
+                  "severity": "High",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2698",
+                  "fix_version": "8.212.04-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-04-23T19:32Z",
+                        "Score": 6.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 5.9,
+                        "Score": 8.1,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2602",
+                  "description": "",
+                  "severity": "High",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2602",
+                  "fix_version": "8.212.04-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-04-23T19:32Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 3.6,
+                        "Score": 7.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2842",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2842",
+                  "fix_version": "8.222.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-07-23T23:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2745",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2745",
+                  "fix_version": "8.222.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-07-23T23:15Z",
+                        "Score": 1.9,
+                        "Vectors": "AV:L/AC:M/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.4,
+                        "ImpactScore": 3.6,
+                        "Score": 5.1,
+                        "Vectors": "CVSS:3.0/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2786",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2786",
+                  "fix_version": "8.222.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-07-23T23:15Z",
+                        "Score": 2.6,
+                        "Vectors": "AV:N/AC:H/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 1.4,
+                        "Score": 3.4,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-7317",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-7317",
+                  "fix_version": "8.222.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-02-04T08:29Z",
+                        "Score": 2.6,
+                        "Vectors": "AV:N/AC:H/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 3.6,
+                        "Score": 5.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2769",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2769",
+                  "fix_version": "8.222.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-07-23T23:15Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 1.4,
+                        "Score": 5.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2766",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2766",
+                  "fix_version": "8.222.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-07-23T23:15Z",
+                        "Score": 2.6,
+                        "Vectors": "AV:N/AC:H/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 1.4,
+                        "Score": 3.1,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2816",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2816",
+                  "fix_version": "8.222.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-07-23T23:15Z",
+                        "Score": 5.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 2.5,
+                        "Score": 4.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2762",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2762",
+                  "fix_version": "8.222.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-07-23T23:15Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 1.4,
+                        "Score": 5.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2962",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2962",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2999",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2999",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 4,
+                        "Vectors": "AV:N/AC:H/Au:N/C:P/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 2.7,
+                        "Score": 4.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2988",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2988",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2989",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2989",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 4,
+                        "Score": 6.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2983",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2983",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2978",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2978",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2958",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2958",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 3.6,
+                        "Score": 5.9,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2992",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2992",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2973",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2973",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2933",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2933",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 1.4,
+                        "Score": 3.1,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2975",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2975",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 5.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 2.5,
+                        "Score": 4.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2945",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2945",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 2.6,
+                        "Vectors": "AV:N/AC:H/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 1.4,
+                        "Score": 3.1,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2949",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2949",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 4,
+                        "Score": 6.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2987",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2987",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2894",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2894",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2964",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2964",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2981",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2981",
+                  "fix_version": "8.232.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-10-16T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2593",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2593",
+                  "fix_version": "8.242.08-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-01-15T17:15Z",
+                        "Score": 5.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 2.5,
+                        "Score": 4.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2604",
+                  "description": "",
+                  "severity": "High",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2604",
+                  "fix_version": "8.242.08-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-01-15T17:15Z",
+                        "Score": 6.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 5.9,
+                        "Score": 8.1,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2583",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2583",
+                  "fix_version": "8.242.08-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-01-15T17:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2601",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2601",
+                  "fix_version": "8.242.08-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-01-15T17:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 4,
+                        "Score": 6.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2654",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2654",
+                  "fix_version": "8.242.08-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-01-15T17:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2659",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2659",
+                  "fix_version": "8.242.08-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-01-15T17:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2590",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2590",
+                  "fix_version": "8.242.08-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-01-15T17:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2755",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2755",
+                  "fix_version": "8.252.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-04-15T14:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2756",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2756",
+                  "fix_version": "8.252.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-04-15T14:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2781",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2781",
+                  "fix_version": "8.252.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-04-15T14:15Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 1.4,
+                        "Score": 5.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2754",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2754",
+                  "fix_version": "8.252.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-04-15T14:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2803",
+                  "description": "",
+                  "severity": "High",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2803",
+                  "fix_version": "8.252.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-04-15T14:15Z",
+                        "Score": 5.1,
+                        "Vectors": "AV:N/AC:H/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 6,
+                        "Score": 8.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2805",
+                  "description": "",
+                  "severity": "High",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2805",
+                  "fix_version": "8.252.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-04-15T14:15Z",
+                        "Score": 5.1,
+                        "Vectors": "AV:N/AC:H/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 6,
+                        "Score": 8.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2830",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2830",
+                  "fix_version": "8.252.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-04-15T14:15Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 1.4,
+                        "Score": 5.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2800",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2800",
+                  "fix_version": "8.252.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-04-15T14:15Z",
+                        "Score": 5.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 2.5,
+                        "Score": 4.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2773",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2773",
+                  "fix_version": "8.252.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-04-15T14:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-2757",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-2757",
+                  "fix_version": "8.252.09-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-04-15T14:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14779",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14779",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-10-21T15:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14781",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14781",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-10-21T15:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14782",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14782",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-10-21T15:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14621",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14621",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-07-15T18:15Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 1.4,
+                        "Score": 5.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14797",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14797",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-10-21T15:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14593",
+                  "description": "",
+                  "severity": "High",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14593",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-07-15T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 4,
+                        "Score": 7.4,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:H/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14803",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14803",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-10-21T15:15Z",
+                        "Score": 5,
+                        "Vectors": "AV:N/AC:L/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 1.4,
+                        "Score": 5.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14577",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14577",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-07-15T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14581",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14581",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-07-15T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14796",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14796",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-10-21T15:15Z",
+                        "Score": 2.6,
+                        "Vectors": "AV:N/AC:H/Au:N/C:P/I:N/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 1.4,
+                        "Score": 3.1,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14583",
+                  "description": "",
+                  "severity": "High",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14583",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-07-15T18:15Z",
+                        "Score": 5.1,
+                        "Vectors": "AV:N/AC:H/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 6,
+                        "Score": 8.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14556",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14556",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-07-15T18:15Z",
+                        "Score": 5.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 2.5,
+                        "Score": 4.8,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14579",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14579",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-07-15T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14792",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14792",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-10-21T15:15Z",
+                        "Score": 5.8,
+                        "Vectors": "AV:N/AC:M/Au:N/C:P/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 2.5,
+                        "Score": 4.2,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14578",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14578",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-07-15T18:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 1.4,
+                        "Score": 3.7,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2020-14798",
+                  "description": "",
+                  "severity": "Low",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14798",
+                  "fix_version": "8.272.10-r0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2020-10-21T15:15Z",
+                        "Score": 2.6,
+                        "Vectors": "AV:N/AC:H/Au:N/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.6,
+                        "ImpactScore": 1.4,
+                        "Score": 3.1,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "libjpeg-turbo",
+              "namespace": "alpine:v3.8",
+              "version": "1.5.3-r3",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2018-14498",
+                  "description": "",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-14498",
+                  "fix_version": "1.5.3-r5",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-03-07T23:29Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 3.6,
+                        "Score": 6.5,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2019-2201",
+                  "description": "",
+                  "severity": "High",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-2201",
+                  "fix_version": "1.5.3-r6",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2019-11-13T18:15Z",
+                        "Score": 9.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:C/I:C/A:C"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 1.8,
+                        "ImpactScore": 5.9,
+                        "Score": 7.8,
+                        "Vectors": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "hash": "sha256:6eb8f15fbf8e8ce61d18c67e4bc82b9b4223fe47174c907ca7168f60e77a075d",
+          "created_by": "RUN mkdir /app # buildkit",
+          "packages": []
+        },
+        {
+          "hash": "sha256:542d4fb10dad6abc39f0dcf5ffb811171b8cd0eca53027481d23ff736a24e75d",
+          "created_by": "COPY /home/gradle/src/build/libs/*.jar /app/spring-boot-application.jar # buildkit",
+          "packages": [
+            {
+              "name": "org.apache.logging.log4j:log4j-core",
+              "namespace": "java",
+              "version": "2.14.1",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2021-44228",
+                  "description": "JNDI features used in configuration, log messages, and parameters do not protect against attacker controlled LDAP and other JNDI related endpoints. An attacker who can control log messages or log message parameters can execute arbitrary code loaded from LDAP servers when message lookup substitution is enabled. From log4j, this behavior has been disabled by default. In previous releases (\u003e2.10) this behavior can be mitigated by setting system property 'log4j2.formatMsgNoLookups' to 'true' or it can be mitigated in prior releases (\u003c2.10) by removing the JndiLookup class from the classpath (example, 'zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class').",
+                  "severity": "Critical",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228",
+                  "fix_version": "2.15.0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-12-10T10:15Z",
+                        "Score": 9.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:C/I:C/A:C"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 3.9,
+                        "ImpactScore": 6,
+                        "Score": 10,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-45046",
+                  "description": "It was found that the fix to address CVE-2021-44228 in Apache Log4j was incomplete in certain non-default configurations. This could allows attackers with control over Thread Context Map (MDC) input data when the logging configuration uses a non-default Pattern Layout with either a Context Lookup (for example, '$${ctx:loginId})' or a Thread Context Map pattern ('%X', '%mdc', or '%MDC') to craft malicious input data using a JNDI Lookup pattern resulting in a denial of service (DOS) attack. Log4j restricts JNDI LDAP lookups to localhost by default. Note that previous mitigations involving configuration such as to set the system property 'log4j2.noFormatMsgLookup' to 'true' do NOT mitigate this specific vulnerability. Log4j fixes this issue by removing support for message lookup patterns and disabling JNDI functionality by default. This issue can be mitigated in prior releases (\u003c2.16.0) by removing the JndiLookup class from the classpath (example: zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class).",
+                  "severity": "Critical",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45046",
+                  "fix_version": "2.16.0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-12-14T19:15Z",
+                        "Score": 5.1,
+                        "Vectors": "AV:N/AC:H/Au:N/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 6,
+                        "Score": 9,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-45105",
+                  "description": "Apache Log4j2 versions 2.0-alpha1 through 2.16.0 (excluding 2.12.3 and 2.3.1) did not protect from uncontrolled recursion from self-referential lookups. This allows an attacker with control over Thread Context Map data to cause a denial of service when a crafted string is interpreted. This issue was fixed in Log4j 2.17.0, 2.12.3, and 2.3.1.",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45105",
+                  "fix_version": "2.17.0",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-12-18T12:15Z",
+                        "Score": 4.3,
+                        "Vectors": "AV:N/AC:M/Au:N/C:N/I:N/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.2,
+                        "ImpactScore": 3.6,
+                        "Score": 5.9,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                },
+                {
+                  "name": "CVE-2021-44832",
+                  "description": "Apache Log4j2 ",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44832",
+                  "fix_version": "2.17.1",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2021-12-28T20:15Z",
+                        "Score": 6,
+                        "Vectors": "AV:N/AC:M/Au:S/C:P/I:P/A:P"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 0.7,
+                        "ImpactScore": 5.9,
+                        "Score": 6.6,
+                        "Vectors": "CVSS:3.0/AV:N/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            },
+            {
+              "name": "org.springframework:spring-core",
+              "namespace": "java",
+              "version": "5.3.13",
+              "vulnerabilities": [
+                {
+                  "name": "CVE-2021-22060",
+                  "description": "In Spring Framework versions 5.3.0 - 5.3.13, 5.2.0 - 5.2.18, and older unsupported versions, it is possible for a user to provide malicious input to cause the insertion of additional log entries. This is a follow-up to CVE-2021-22096 that protects against additional types of input and in more places of the Spring Framework codebase.",
+                  "severity": "Medium",
+                  "link": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22060",
+                  "fix_version": "5.3.14",
+                  "metadata": {
+                    "NVD": {
+                      "CVSSv2": {
+                        "PublishedDateTime": "2022-01-10T14:10Z",
+                        "Score": 4,
+                        "Vectors": "AV:N/AC:L/Au:S/C:N/I:P/A:N"
+                      },
+                      "CVSSv3": {
+                        "ExploitabilityScore": 2.8,
+                        "ImpactScore": 1.4,
+                        "Score": 4.3,
+                        "Vectors": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N"
+                      }
+                    }
+                  },
+                  "status": "VULNERABLE"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "scan_status": "Success"
+  },
+  "policy": null
+}
