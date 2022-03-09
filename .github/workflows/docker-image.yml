@@ -1,0 +1,55 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Get short SHA
+      run: echo "GHA_SHA=${GITHUB_SHA:0:7}" >> $GITHUB_ENV
+      
+    - name: Build Docker images
+      uses: docker/build-push-action@v2.9.0
+      with:
+        tags: kathywan/log4shell-vulnerable-app:${{ env.GHA_SHA }},kathywan/log4shell-vulnerable-app:latest
+        load: true
+
+    - name: lw-scanner
+      uses: lacework/lw-scanner-action@v0.7.1
+      with:
+        LW_ACCOUNT_NAME: ${{ secrets.LW_ACCOUNT_NAME }}
+        LW_ACCESS_TOKEN: ${{ secrets.LW_ACCESS_TOKEN }}
+        IMAGE_NAME: kathywan/log4shell-vulnerable-app
+        IMAGE_TAG: ${{ env.GHA_SHA }}
+        SCAN_LIBRARY_PACKAGES: true
+        SAVE_RESULTS_IN_LACEWORK: true
+        SAVE_BUILD_REPORT: true
+        # Specify custom file name for the HTML evalutation report, by default the name is OS_TYPE-IMAGE_DIGEST_SHA256.html.
+        BUILD_REPORT_FILE_NAME: log4shell-vulnerable-app-build-rpt.html
+        # Fail the build of vulnerabilities are discovered according to the threshold. (Default: true)
+        FAIL_BUILD: true
+        # Severity threshold that will fail the build: info, low, medium, high, critical, fixable. (Default: medium)
+        SEVERITY_THRESHOLD: fixable
+        # Use the Lacework policy managed feature (beta). If enabled this overwrites `FAIL_BUILD`and `SEVERITY_THRESHOLD`. (Default: false)
+        USE_POLICY: false
+        
+    - name: Docker Login
+      uses: docker/login-action@v1.14.1
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+        
+    - name: Tag and Push Docker images
+      uses: docker/build-push-action@v2.9.0
+      with:
+        tags: kathywan/log4shell-vulnerable-app:${{ env.GHA_SHA }},kathywan/log4shell-vulnerable-app:latest
+        push: true
