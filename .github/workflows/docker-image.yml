@@ -36,9 +36,9 @@ jobs:
         # Specify custom file name for the HTML evalutation report, by default the name is OS_TYPE-IMAGE_DIGEST_SHA256.html.
         BUILD_REPORT_FILE_NAME: log4shell-vulnerable-app-build-rpt.html
         # Fail the build of vulnerabilities are discovered according to the threshold. (Default: true)
-        FAIL_BUILD: false
+        FAIL_BUILD: true
         # Severity threshold that will fail the build: info, low, medium, high, critical, fixable. (Default: medium)
-        SEVERITY_THRESHOLD: fixable
+        SEVERITY_THRESHOLD: critical
         # Use the Lacework policy managed feature (beta). If enabled this overwrites `FAIL_BUILD`and `SEVERITY_THRESHOLD`. (Default: false)
         USE_POLICY: false
    
