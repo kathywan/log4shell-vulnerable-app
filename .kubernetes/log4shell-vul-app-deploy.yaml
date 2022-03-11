@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: log4shell-vulnerable-dep
+  name: log4shell-vulnerable-dep
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: log4shell-vulnerable-dep
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: log4shell-vulnerable-dep
+    spec:
+      containers:
+      - image: kathywan/log4shell-vulnerable-app:latest
+        name: log4shell-vulnerable-app
+        resources: {}
