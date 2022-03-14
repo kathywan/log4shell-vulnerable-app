@@ -29,7 +29,6 @@ jobs:
           chmod +x kubectl
           mkdir -p ~/.local/bin/kubectl
           mv ./kubectl ~/.local/bin/kubectl
-          kubectl version
 
       - name: update kubeconfig
         env:
@@ -40,6 +39,7 @@ jobs:
           EKS_CLUSTER: eksworkshop-eksctl
         run: |
           aws eks update-kubeconfig --name $EKS_CLUSTER --role-arn $AWS_ROLE_ARN
+          kubectl get nodes
 
       - name: Trigger deploy
         run: |
