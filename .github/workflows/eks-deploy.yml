@@ -23,7 +23,8 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
-          role-to-assume: arn:aws:iam::950194951070:role/k8sAdmin
+          role-to-assume: k8sAdmin
+          role-duration-seconds: 1200
 
       - name: update kubeconfig
         uses: ItsKarma/aws-cli@v1.70.0
