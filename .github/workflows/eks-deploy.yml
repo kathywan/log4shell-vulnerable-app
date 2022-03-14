@@ -39,6 +39,5 @@ jobs:
           aws eks update-kubeconfig --name $EKS_CLUSTER 
 
       - name: Trigger deploy
-        uses: Consensys/kubernetes-action@master
-        with:
-          args: apply .kubernetes/log4shell-vul-app-deploy.yaml
+        run: |
+          kubectl apply .kubernetes/log4shell-vul-app-deploy.yaml
