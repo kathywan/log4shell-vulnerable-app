@@ -28,7 +28,6 @@ jobs:
           chmod +x kubectl
           mkdir -p ~/.local/bin/kubectl
           mv ./kubectl ~/.local/bin/kubectl
-          kubectl version
           
       - name: update kubeconfig
         env:
