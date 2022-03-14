@@ -30,7 +30,7 @@ jobs:
           mkdir -p ~/.local/bin/kubectl
           mv ./kubectl ~/.local/bin/kubectl
 
-      - name: update kubeconfig
+      - name: update kubeconfig & deploy
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -39,8 +39,5 @@ jobs:
           EKS_CLUSTER: eksworkshop-eksctl
         run: |
           aws eks update-kubeconfig --name $EKS_CLUSTER --role-arn $AWS_ROLE_ARN
-          kubectl get nodes
+          kubectl apply -f $GITHUB_WORKSPACE/.kubernetes/log4shell-vul-app-deploy.yaml
 
-      - name: Trigger deploy
-        run: |
-          kubectl apply -f .kubernetes/log4shell-vul-app-deploy.yaml
