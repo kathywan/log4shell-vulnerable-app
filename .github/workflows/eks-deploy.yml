@@ -41,4 +41,4 @@ jobs:
 
       - name: Trigger deploy
         run: |
-          kubectl apply .kubernetes/log4shell-vul-app-deploy.yaml
+          kubectl apply -f .kubernetes/log4shell-vul-app-deploy.yaml
