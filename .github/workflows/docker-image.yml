@@ -44,6 +44,7 @@ jobs:
    
     - name: Commit files
       id: commit
+      if: always()
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "github-actions"
