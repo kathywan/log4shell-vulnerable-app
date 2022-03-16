@@ -48,12 +48,12 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "github-actions"
-        git add --all
-        if [-z "$(git status --porcelain)"]; then
-           echo "::set-output name=push::false"
-        else
+        git add log4shell-vulnerable-app-build-rpt.html
+        if [[ $(git status --porcelain) ]]; then
            git commit -m "Add scanning report files for image log4shell-vulnerable-app:${{ env.GHA_SHA }}" -a
            echo "::set-output name=push::true"
+        else
+           echo "::set-output name=push::false"
         fi
       shell: bash
       
