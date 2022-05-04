@@ -4,9 +4,10 @@ orbs:
 version: 2.1
 jobs:
   docker-job:
-    executor: docker/docker
+    executor: docker/machine
     steps:
       - checkout
+      - docker/install-docker
       - docker/build:
           image: kathywan/log4shell-vulnerable-app
           tag: '0.1.$CIRCLE_BUILD_NUM'
