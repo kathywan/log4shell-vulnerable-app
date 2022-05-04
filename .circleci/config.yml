@@ -5,7 +5,6 @@ version: 2.1
 jobs:
   docker-job:
     docker:
-      # replace with your preferred image
       - image: cimg/base:stable
     steps:
       - docker/build:
@@ -14,11 +13,12 @@ jobs:
           lint-dockerfile: false 
           treat-warnings-as-errors: false 
           tag: '0.1.$CIRCLE_BUILD_NUM' 
-
-      - lacework/inline-scanner-scan:
-          image_name: lacework/lacework-inline-scanner
-          image_tag: latest
-
+      - lacework/install-inline-scanner
+      - lacework/inline-scanner-evaluate:
+          image_name: kathywan/log4shell-vulnerable-app
+          image_tag: '0.1.$CIRCLE_BUILD_NUM'
+          save: true
+          scan_library_packages: true
       - docker/push:
           image: kathywan/log4shell-vulnerable-app 
           tag: '0.1.$CIRCLE_BUILD_NUM' 
