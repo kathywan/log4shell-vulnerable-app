@@ -24,7 +24,7 @@ jobs:
           low_violation_exit_code: 5
           info_violation_exit_code: 6
       - run:
-          name: Demonstrate that Mongo DB is available as localhost
+          name: Evaluate LW scan result
           command: |
             export LW_SCANNER_EXIT_CODE=$?
             echo "LW inline scanner exit code: $LW_SCANNER_EXIT_CODE"
