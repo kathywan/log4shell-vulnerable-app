@@ -5,7 +5,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
+  workflow_dispatch:
+  
 jobs:
 
   build:
@@ -44,20 +45,21 @@ jobs:
    
     - name: Commit files
       id: commit
+      if: always()
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "github-actions"
-        git add --all
-        if [-z "$(git status --porcelain)"]; then
-           echo "::set-output name=push::false"
-        else
+        git add log4shell-vulnerable-app-build-rpt.html
+        if [[ $(git status --porcelain) ]]; then
            git commit -m "Add scanning report files for image log4shell-vulnerable-app:${{ env.GHA_SHA }}" -a
            echo "::set-output name=push::true"
+        else
+           echo "::set-output name=push::false"
         fi
       shell: bash
       
     - name: Push Report File to Repo
-      if: steps.commit.outputs.push == 'true'
+      if: always() && steps.commit.outputs.push == 'true'
       uses: ad-m/github-push-action@master
       with:
          github_token: ${{ secrets.GITHUB_TOKEN }}
