@@ -4,8 +4,7 @@ orbs:
 version: 2.1
 jobs:
   docker-job:
-    docker:
-      - image: cimg/base:stable
+    executor: docker/docker
     steps:
       - checkout
       - docker/build:
