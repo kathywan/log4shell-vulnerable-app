@@ -23,7 +23,7 @@ jobs:
           medium_violation_exit_code: 4
           low_violation_exit_code: 5
           info_violation_exit_code: 6
-       - run:
+      - run:
           name: Demonstrate that Mongo DB is available as localhost
           command: |
             export LW_SCANNER_EXIT_CODE=$?
