@@ -23,10 +23,21 @@ jobs:
           medium_violation_exit_code: 4
           low_violation_exit_code: 5
           info_violation_exit_code: 6
+       - run:
+          name: Demonstrate that Mongo DB is available as localhost
+          command: |
+            export LW_SCANNER_EXIT_CODE=$?
+            echo "LW inline scanner exit code: $LW_SCANNER_EXIT_CODE"
+            # Exit if check is failed and policy feature not used
+            if [ ${LW_SCANNER_EXIT_CODE} != 0 ]; then
+                echo "Vulnerability scan failed. Quit job as security can not be guaranteed. Exiting with code 1"
+                echo "::set-output name=EXIT_CODE::1"
+                exit 1
+            fi
       - docker/push:
           image: kathywan/log4shell-vulnerable-app 
           tag: '0.1.$CIRCLE_BUILD_NUM' 
-
+          
 workflows:
   docker-workflow:
     jobs:
