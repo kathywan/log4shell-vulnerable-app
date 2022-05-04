@@ -17,6 +17,7 @@ jobs:
           image_tag: '0.1.$CIRCLE_BUILD_NUM'
           save: true
           scan_library_packages: true
+          policy: true
       - docker/push:
           image: kathywan/log4shell-vulnerable-app 
           tag: '0.1.$CIRCLE_BUILD_NUM' 
