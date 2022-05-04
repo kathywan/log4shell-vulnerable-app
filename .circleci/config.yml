@@ -18,6 +18,11 @@ jobs:
           save: true
           scan_library_packages: true
           policy: true
+          critical_violation_exit_code: 2
+          high_violation_exit_code: 3
+          medium_violation_exit_code: 4
+          low_violation_exit_code: 5
+          info_violation_exit_code: 6
       - docker/push:
           image: kathywan/log4shell-vulnerable-app 
           tag: '0.1.$CIRCLE_BUILD_NUM' 
