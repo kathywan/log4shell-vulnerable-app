@@ -9,7 +9,7 @@ jobs:
     steps:
       - docker/build:
           image: kathywan/log4shell-vulnerable-app
-          dockerfile: $CIRCLE_WORKING_DIRECTO/DockerfileRY 
+          dockerfile: $CIRCLE_WORKING_DIRECTO/Dockerfile 
           debug: false 
           lint-dockerfile: false 
           treat-warnings-as-errors: false 
